@@ -47,8 +47,6 @@ services:
   # You can connect to it using any MongoDB client.
   mongodb:
     image: "mongo:latest"
-    ports:
-      - "27017:27017"
     volumes:
       - mongo:/data/db
 
