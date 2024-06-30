@@ -10,6 +10,7 @@ services:
   # This is the Emissary server that runs a single "localhost" domain on port 8080.
   # It runs on http://localhost:8080
   server:
+    image: emissary/server:latest
     build:
       context: .
       dockerfile: ./.docker/demo-dockerfile
@@ -27,6 +28,7 @@ services:
   # although you probably won't have to use it much for this demo.
   # It runs on http://localhost:8888
   setup:
+    image: emissary/server:latest
     build:
       context: .
       dockerfile: ./.docker/demo-dockerfile
