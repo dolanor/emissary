@@ -10,7 +10,6 @@ services:
   # This is the Emissary server that runs a single "localhost" domain on port 8080.
   # It runs on http://localhost:8080
   server:
-    container_name: emissary_demo_server
     build:
       context: .
       dockerfile: ./.docker/demo-dockerfile
@@ -28,7 +27,6 @@ services:
   # although you probably won't have to use it much for this demo.
   # It runs on http://localhost:8888
   setup:
-    container_name: emissary_demo_setup
     build:
       context: .
       dockerfile: ./.docker/demo-dockerfile
@@ -46,7 +44,6 @@ services:
   # This mongo database stores data for the Emissary site.
   # You can connect to it using any MongoDB client.
   mongodb:
-    container_name: emissary_demo_database
     image: "mongo:latest"
     ports:
       - "27017:27017"
